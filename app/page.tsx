@@ -31,7 +31,7 @@ export default function Page() {
           {/* Image is only shown if isVisible is true */}
           {isVisible && (
             <Image
-              src="/kederli.jpg"
+              src="/kederli.png"
               alt="Hidden Image"
               width={450}
               height={300}
