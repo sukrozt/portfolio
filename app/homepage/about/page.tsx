@@ -22,10 +22,28 @@ export default function Page() {
         <li className="mb-4 text-3xl text-orange-950 font-bold">
         Skills
         </li>
-        <li className="relative before:content-['🌺'] before:absolute before:-left-6 before:top-0 pl-6 mb-4 text-xl text-orange-950 ">Programming Languages: Python, Java, C++, C#, SQL, Javascript, HTML, CSS, TypeScript</li>
-        <li className="relative before:content-['🌺'] before:absolute before:-left-6 before:top-0 pl-6 mb-4 text-xl text-orange-950 ">Frameworks and Libraries: Git, MySQL, PostgreSQL, SymmetricDs, Unity, Next.js, Tailwind, React, clsx </li>
-        <li className="relative before:content-['🌺'] before:absolute before:-left-6 before:top-0 pl-6 mb-4 text-xl text-orange-950 ">Areas of Expertise: Network Systems, Cybersecurity, Game Development, Web Development</li>
-        <li className="relative before:content-['🌺'] before:absolute before:-left-6 before:top-0 pl-6 mb-4 text-xl text-orange-950 ">Languages: Turkish (Native), English (Advanced), French (Beginner)</li>
+        {[
+          {
+            title: "Programming Languages",
+            content: "Python, Java, C++, C#, SQL, Javascript, HTML, CSS, TypeScript"
+          },
+          {
+            title: "Frameworks and Libraries",
+            content: "Git, MySQL, PostgreSQL, SymmetricDs, Unity, Next.js, Tailwind, React, clsx"
+          },
+          {
+            title: "Areas of Expertise",
+            content: "Network Systems, Cybersecurity, Game Development, Web Development"
+          },
+          {
+            title: "Languages",
+            content: "Turkish (Native), English (Advanced), French (Beginner)"
+          }
+        ].map((item, index) => (
+          <li key={index} className="relative before:content-['🌺'] before:absolute before:-left-6 before:top-0 pl-6 mb-4 text-xl text-orange-950 ">
+            {item.title}: {item.content}
+          </li>
+        ))}
         </ol>
         </main>
         </div>
